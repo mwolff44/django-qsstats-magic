@@ -16,3 +16,6 @@ env:
   - TOXENV="sqlite_tz_nopytz"
 install: pip install tox
 script: tox -e $TOXENV
+before_script:
+  - mysql -e 'create database qsstats_test;'
+  - psql -c 'create database qsstats_test;' -U postgres
