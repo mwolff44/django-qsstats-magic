@@ -1,0 +1,18 @@
+language: python
+sudo: false
+python:
+  - "2.7"
+env:
+  - TOXENV="py27"
+  - TOXENV="pypy"
+  - TOXENV="py_django19"
+  - TOXENV="postgres"
+  - TOXENV="mysql"
+  - TOXENV="postgres_tz"
+  - TOXENV="mysql_tz"
+  - TOXENV="sqlite_tz"
+  - TOXENV="mysql_tz_nopytz"
+  - TOXENV="postgres_tz_nopytz"
+  - TOXENV="sqlite_tz_nopytz"
+install: pip install tox
+script: tox -e $TOXENV
