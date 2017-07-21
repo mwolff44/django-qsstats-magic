@@ -14,6 +14,8 @@ from qsstats.utils import get_bounds, _to_datetime, _parse_interval, get_interva
 from qsstats import compat
 from qsstats.exceptions import *
 
+from six import string_types
+
 class QuerySetStats(object):
     """
     Generates statistics about a queryset using Django aggregates.  QuerySetStats
@@ -114,7 +116,7 @@ class QuerySetStats(object):
 
         today = _remove_time(compat.now())
         def to_dt(d):
-            if isinstance(d, basestring):
+            if isinstance(d, string_types):
                 return parse(d, yearfirst=True, default=today)
             return d
 
