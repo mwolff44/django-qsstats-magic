@@ -15,7 +15,7 @@ setup(
     author_email='mcroydon@gmail.com, kmike84@gmail.com',
     url='http://bitbucket.org/kmike/django-qsstats-magic/',
     packages=['qsstats'],
-    requires=['dateutil(>=1.4.1, < 2.0)'],
+    requires=['dateutil(>=1.4.1, < 2.0)', 'six'],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
