@@ -5,4 +5,5 @@ Authors & Contributors
 * Mikhail Korobov;
 * Pawel Tomasiewicz;
 * Steve Jones;
+* Petr Dlouhý;
 * @ivirabyan.
